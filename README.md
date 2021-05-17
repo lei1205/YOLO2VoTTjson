@@ -1,6 +1,6 @@
-# txt2vottjson
+# YOLO2vottjson
 
-**txt2vottjson** is a tool to improve efficiency of object tagging.
+**YOLO2vottjson** is a tool to improve efficiency of object tagging.
 
 1. Pre-Label: Get bounding boxes via YOLO and save result in txt:
 
