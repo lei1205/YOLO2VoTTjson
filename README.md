@@ -2,7 +2,7 @@
 
 **txt2vottjson** is a tool to improve efficiency of object tagging.
 
-1. Pre-Label: Get bounding boxes via YOLOv5 and save result in txt:
+1. Pre-Label: Get bounding boxes via YOLO and save result in txt:
 
 ```
 width
