@@ -1,16 +1,66 @@
 # YOLO2VoTTjson
-
 **YOLO2VoTTjson** is a tool to improve efficiency of object tagging.
+## Prerequisite:
+* **VoTT:**
+  
+  Please use [VoTT v1.7.2](https://github.com/microsoft/VoTT/releases/tag/v1.7.2).
+  VoTT v2.0.0 and above use different JSON file. This script is not designed for that.
 
-1. Pre-Label: Get bounding boxes via YOLO and save result in txt:
+* **`yolo2VoTTjson.v2.py`** is dependent on **opencv-python**.
+  
+  ```
+  pip install opencv-python
+  ``` 
+
+* `yolo2VoTTjson.v1.py` is dependent on **tkinter**. 
+  
+  * If you are running python on Windows, generally speaking you don't need to install this package specifically.
+  
+  * For those who runing python on Ubuntu:
+    ```       
+    sudo apt-get update
+    sudo apt-get install python3-tk
+    ```         
+
+## YOLO2VoTTjson V2
+**`YOLO2VoTTjson.v2.py`** no longer needs special formatted txt. Raw YOLO txt is allowed.
+* **Run:**
+  
+  Save pictures and txt in two separated folders. Then run the script with command like this：
+  ```
+  python YOLO2VoTTjson.v2.py ./pic/ ./txt/ ./pic.json
+  ```
+  Note that make sure the end "/" is included. 
+  
+  The last parameter is optional. If ignored json file will be saved along with `YOLO2VoTTjson.v2.py`. 
+
+* **For VoTT to read json:**
+  
+  You should put the json file, which has same filename as the pic folder, in the same level directory with the pic folder.
+  
+  
+* **To change default object type:**
+  
+  Please edit line 32
+
+  ```
+  # 8 object types
+  index = {0:"Heavy-Vehicle",1:"Midsize-Vehicle",2:"Compact-Vehicle",3:"Car",4:"None-Vehicle",5:"Pedestrian",6:"Large-Bus",7:"Light-Bus"}
+  raw_dict = {"frames": {}, "framerate": "1", "inputTags": "Heavy-Vehicle,Midsize-Vehicle,Compact-Vehicle,Car,None-Vehicle,Pedestrian,Large-Bus,Light-Bus",
+            "tag_colors": ["#0ce28f","#950bb1","#0017ff","#39a400","#c53f00","#c2f20c","#2c009b","#008acb"]}
+  ```
+
+## YOLO2VoTTjson V1 (Not Recommended)
+
+1. Pre-Label: Get bounding boxes via YOLO and save result in txt with **special format** like this:
 
             
         width
         height
-        type(not type id) x_center y_center w h  
+        type(not type id) x1 y1 x2 y2 
             
 
-   for example:
+   For example:
    
             
         4000
@@ -25,32 +75,13 @@
         car 1863 303 1919 349 
             
 
-2. Save both image and txt in two separated directory
-3. Run `txt2vottjson.py`
-4. Move the JSON file just created to the same level of the image directory
-5. Open the image directory with VoTT
-6. Manually adjust some bounding boxes with errors
+2. Save pictures and txt in two separated folders
+3. Run `yolo2VoTTjson.v1.py`
+4. Move the JSON file just created to the same level of the pictures folder
+5. Open the pictures directory with VoTT
 
 
 
-### Prerequisite:
-
-Please use VoTT v1.7.2 https://github.com/microsoft/VoTT/releases/tag/v1.7.2
-
-VoTT v2.0.0 and above use different JSON file. This script is not designed for that.
-
-```bash
-sudo apt-get update
-sudo apt-get install python3-tk
-```
 
 
 
-### To change default object type:
-
-Please edit line 31
-
-```
-raw_dict = {"frames": {}, "framerate": "1", "inputTags": "person,bicycle,tricycle,car,bus,truck",
-            "tag_colors": ["#f409a2", "#ff4900", "#0ed29a", "#0500a6", "#32dc00", "#cac800"]}
-```
