@@ -12,7 +12,7 @@
   pip install opencv-python
   ``` 
 
-* YOLO2VoTTjson.v1.py` is dependent on **tkinter**. 
+* `YOLO2VoTTjson.v1.py` is dependent on **tkinter**. 
   
   * If you are running python on Windows, generally speaking you don't need to install this package specifically.
   
