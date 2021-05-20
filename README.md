@@ -12,7 +12,7 @@
   pip install opencv-python
   ``` 
 
-* `yolo2VoTTjson.v1.py` is dependent on **tkinter**. 
+* YOLO2VoTTjson.v1.py` is dependent on **tkinter**. 
   
   * If you are running python on Windows, generally speaking you don't need to install this package specifically.
   
@@ -36,7 +36,7 @@
 
 * **For VoTT to read json:**
   
-  You should put the json file, which has same filename as the pic folder, in the same level directory with the pic folder.
+  You should put the json file, which has same filename as the picture folder, in the same level directory with the picture folder.
   
   
 * **To change default object type:**
@@ -76,9 +76,9 @@
             
 
 2. Save pictures and txt in two separated folders
-3. Run `yolo2VoTTjson.v1.py`
-4. Move the JSON file just created to the same level of the pictures folder
-5. Open the pictures directory with VoTT
+3. Run `YOLO2VoTTjson.v1.py`
+4. Move the JSON file just created to the same level of the picture folder
+5. Open the picture folder with VoTT
 
 
 
