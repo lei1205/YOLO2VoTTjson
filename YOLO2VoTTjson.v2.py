@@ -30,8 +30,8 @@ if txt_filelists == []:
     exit()
 
 # 8 object types
-index = {0:"Heavy-Vehicle",1:"Midsize-Vehicle",2:"Compact-Vehicle",3:"Car",4:"None-Vehicle",5:"Pedestrian",6:"Large-Bus",7:"Light-Bus"}
-raw_dict = {"frames": {}, "framerate": "1", "inputTags": "Heavy-Vehicle,Midsize-Vehicle,Compact-Vehicle,Car,None-Vehicle,Pedestrian,Large-Bus,Light-Bus",
+index = {0:"CarType0",1:"CarType1",2:"CarType2",3:"CarType3",4:"CarType4",5:"CarType5",6:"CarType6",7:"CarType7"}
+raw_dict = {"frames": {}, "framerate": "1", "inputTags": "CarType0,CarType1,CarType2,CarType3,CarType4,CarType5,CarType6,CarType7",
             "tag_colors": ["#0ce28f","#950bb1","#0017ff","#39a400","#c53f00","#c2f20c","#2c009b","#008acb"]}
     
 # for all filename
