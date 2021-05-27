@@ -4,17 +4,18 @@
 * **VoTT:**
   
   Please use [VoTT v1.7.2](https://github.com/microsoft/VoTT/releases/tag/v1.7.2).
+  
   VoTT v2.0.0 and above use different JSON file. This script is not designed for that.
 
-* **`YOLO2VoTTjson.v2.py`** is dependent on **opencv-python**.
+* **`YOLO2VoTTjson.py`** is dependent on **opencv-python**.
   
   ```
   pip install opencv-python
   ``` 
     
 
-## YOLO2VoTTjson V2
-**`YOLO2VoTTjson.v2.py`** no longer needs special formatted txt. Raw YOLO txt is allowed.
+## YOLO2VoTTjson V2 Instruction
+**`YOLO2VoTTjson.py`** no longer needs special formatted txt. Raw YOLO txt is allowed.
 * **Run:**
   
   Save pictures and txt in two separated folders. Then run the script with command like this：
@@ -24,7 +25,7 @@
   python YOLO2VoTTjson.v2.py ./pic ./txt ./pic.json
   ```
   
-  The last parameter is optional. If ignored json file will be saved along with `YOLO2VoTTjson.v2.py`. 
+  The last parameter is optional. If ignored json file will be saved along with `YOLO2VoTTjson.py`. 
 
 * **For VoTT to read json:**
   

@@ -1,4 +1,4 @@
-# YOLO2VoTTjson
+# YOLO2VoTTjson V1 (Not Recommended)
 **YOLO2VoTTjson** is a tool to improve efficiency of object tagging.
 ## Prerequisite:
 * **VoTT:**
@@ -27,9 +27,8 @@
             "tag_colors": ["#f409a2", "#ff4900", "#0ed29a", "#0500a6", "#32dc00", "#cac800"]}
   ```
 
-## YOLO2VoTTjson V1 (Not Recommended)
-
-1. Pre-Label: Get bounding boxes via YOLO and save result in txt with **special format** like this:
+## Instruction
+* Pre-Label: Get bounding boxes via YOLO and save result in txt with **special format** like this:
 
             
         width
@@ -52,10 +51,10 @@
         car 1863 303 1919 349 
             
 
-2. Save pictures and txt in two separated folders
-3. Run `YOLO2VoTTjson.v1.py`
-4. Move the JSON file just created to the same level of the picture folder
-5. Open the picture folder with VoTT
+* Save pictures and txt in two separated folders
+* Run `YOLO2VoTTjson.v1.py`
+* Move the JSON file just created to the same level of the picture folder
+* Open the picture folder with VoTT
 
 
 
