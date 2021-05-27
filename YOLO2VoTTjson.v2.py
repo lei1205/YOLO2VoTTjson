@@ -4,9 +4,12 @@ import cv2
 import json
 
 argument = sys.argv[1:]
-print(len(argument))
+if not argument[0].endswith('/'):
+    argument[0] += '/'
+if not argument[1].endswith('/'):
+    argument[1] += '/'
 if len(argument) < 2 or len(argument) > 3:
-    print("Example: python test.py ./pic/ ./txt/ ./pic.json")
+    print("Example: python test.py ./pic ./txt ./pic.json")
     sys.exit(1)
 elif len(argument) == 2:
     pic_dir = argument[0]
