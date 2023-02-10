@@ -1,46 +1,46 @@
 # YOLO2VoTTjson
 **YOLO2VoTTjson** is a tool to improve efficiency of object tagging.
 ## Prerequisite:
-* **VoTT:**
-  
-  Please use [VoTT v1.7.2](https://github.com/microsoft/VoTT/releases/tag/v1.7.2).
-  
-  VoTT v2.0.0 and above use different JSON file. This script is not designed for that.
 
-* **`YOLO2VoTTjson.py`** is dependent on **opencv-python**.
+Please use [VoTT v1.7.2](https://github.com/microsoft/VoTT/releases/tag/v1.7.2).
   
-  ```
-  pip install opencv-python
-  ``` 
+VoTT v2.0.0 and above use different JSON file. This script is not designed for that.
+
+**`YOLO2VoTTjson.py`** is dependent on **opencv-python**.
+  
+```
+pip install opencv-python
+``` 
     
 
 ## YOLO2VoTTjson V2 Instruction
-**`YOLO2VoTTjson.py`** no longer needs special formatted txt. Raw YOLO txt is allowed.
-* **Run:**
-  
-  Save pictures and txt in two separated folders. Then run the script with command like this：
+**`YOLO2VoTTjson.py`** needs Raw YOLO txt.
 
-  picture folder, yolo txt folder, json file destination (optional)
-  ```
-  python YOLO2VoTTjson.v2.py ./pic ./txt ./pic.json
-  ```
+**Run:**
   
-  The last parameter is optional. If ignored json file will be saved along with `YOLO2VoTTjson.py`. 
+Save pictures and txt in two separated folders. Then run the script with command like this：
 
-* **For VoTT to read json:**
+picture folder, yolo txt folder, json file destination (optional)
+```
+python YOLO2VoTTjson.v2.py ./pic ./txt ./pic.json
+```
   
-  You should put the json file, which has same filename as the picture folder, in the same level directory with the picture folder.
-  
-  
-* **To change default object type:**
-  
-  Please edit line 32
+The last parameter is optional. If ignored json file will be saved along with `YOLO2VoTTjson.py`. 
 
-  ```
-  # 8 object types
-  index = {0:"CarType0",1:"CarType1",2:"CarType2",3:"CarType3",4:"CarType4",5:"CarType5",6:"CarType6",7:"CarType7"}
-  raw_dict = {"frames": {}, "framerate": "1", "inputTags": "CarType0,CarType1,CarType2,CarType3,CarType4,CarType5,CarType6,CarType7",
-            "tag_colors": ["#0ce28f","#950bb1","#0017ff","#39a400","#c53f00","#c2f20c","#2c009b","#008acb"]}
-  ```
+**For VoTT to read json:**
+  
+You should put json file, which has same filename as the picture folder, in the same level directory with the picture folder.
+  
+  
+**To change default object type:**
+  
+Please edit line 32
+
+```
+# 8 object types
+index = {0:"CarType0",1:"CarType1",2:"CarType2",3:"CarType3",4:"CarType4",5:"CarType5",6:"CarType6",7:"CarType7"}
+raw_dict = {"frames": {}, "framerate": "1", "inputTags": "CarType0,CarType1,CarType2,CarType3,CarType4,CarType5,CarType6,CarType7",
+          "tag_colors": ["#0ce28f","#950bb1","#0017ff","#39a400","#c53f00","#c2f20c","#2c009b","#008acb"]}
+```
 
 
